@@ -37,16 +37,12 @@ Dự án được xây dựng với kiến trúc Fullstack, tách biệt hoàn t
 
 ## 📸 Ảnh chụp màn hình
 * Ảnh Menu Khách Hàng
-[BDSforntend-main.zip](https://github.com/user-attachments/files/26106575/BDSforntend-main.zip)
-<img width="1896" height="892" alt="screenshot_1773896398" src="https://github.com/user-attachments/assets/776fa897-9e8e-49a6-abc7-1da50a294744" />
-<img width="1898" height="905" alt="screenshot_1773895643" src="https://github.com/user-attachments/assets/ba52b449-7320-4267-8b9d-d12e23e10c62" />
 <img width="1873" height="877" alt="screenshot_1773895330" src="https://github.com/user-attachments/assets/12eec6a9-084d-46b8-bf32-01e7afe8615a" />
+
 * Ảnh Menu Nhân Viên:
-  [BDSforntend-main.zip](https://github.com/user-attachments/files/26106569/BDSforntend-main.zip)
 <img width="1896" height="892" alt="screenshot_1773896398" src="https://github.com/user-attachments/assets/508b77e0-27ab-4f2d-8bbd-297e3eb87ae4" />
+
 * Ảnh DashBroad Admin
-  [BDSforntend-main.zip](https://github.com/user-attachments/files/26106578/BDSforntend-main.zip)
-<img width="1896" height="892" alt="screenshot_1773896398" src="https://github.com/user-attachments/assets/5f398bc1-e26a-40e5-b615-485884375fae" />
 <img width="1898" height="905" alt="screenshot_1773895643" src="https://github.com/user-attachments/assets/826840cd-e34c-436b-b108-857d20817dfe" />
 
 ## 🛠️ Hướng dẫn cài đặt 
