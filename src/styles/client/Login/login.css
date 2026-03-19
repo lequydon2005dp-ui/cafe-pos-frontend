@@ -1,0 +1,240 @@
+/* Import font chữ hiện đại, tròn trịa */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --coffee-dark: #3E2723;
+  --coffee-medium: #5D4037;
+  --coffee-light: #D7CCC8;
+  --accent-orange: #FF7043;
+  --accent-green: #66BB6A;
+  --bg-overlay: rgba(255, 255, 255, 0.95);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-hard: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  /* Hình nền cà phê trừu tượng hoặc gradient ấm */
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(93, 64, 55, 0.8) 0%, rgba(62, 39, 35, 0.95) 90%),
+    url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--bg-overlay);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Trang trí góc */
+.card-decoration {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #8D6E63, #3E2723);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+/* Phần Logo */
+.brand-section {
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #5D4037, #3E2723);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(62, 39, 35, 0.4);
+  border: 4px solid #fff;
+}
+
+.brand-title {
+  color: var(--coffee-dark);
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  color: #795548;
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Màn hình hiển thị mã */
+.display-screen {
+  background: #ECEFF1;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  border-bottom: 4px solid #CFD8DC;
+}
+
+.pin-code {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--coffee-dark);
+  letter-spacing: 15px;
+  min-height: 72px; /* Giữ chiều cao cố định */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-placeholder {
+  font-size: 18px;
+  color: #B0BEC5;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+/* Bàn phím số */
+.numpad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.numpad-btn {
+  background: #fff;
+  border: 1px solid #EFEBE9;
+  border-radius: 18px;
+  padding: 20px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--coffee-dark);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 0 #D7CCC8;
+  user-select: none;
+}
+
+.numpad-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #D7CCC8;
+}
+
+.numpad-btn.delete-btn {
+  background: #FFEBEE;
+  color: #D32F2F;
+  box-shadow: 0 4px 0 #FFCDD2;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad-btn.delete-btn:active {
+  box-shadow: 0 0 0 #FFCDD2;
+}
+
+/* Các nút hành động chính */
+.action-group {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-main {
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.btn-clear {
+  background: #FFF3E0;
+  color: #E65100;
+  flex: 1;
+}
+
+.btn-clear:hover {
+  background: #FFE0B2;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  color: white;
+  flex: 2;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #90A4AE;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 25px;
+    border-radius: 30px;
+  }
+  .pin-code {
+    font-size: 36px;
+  }
+  .numpad-btn {
+    padding: 15px 0;
+    font-size: 24px;
+  }
+}

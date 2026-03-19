@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --coffee-dark: #3E2723;
+  --coffee-primary: #5D4037;
+  --accent-orange: #FB8C00;
+  --bg-warm: #FFF8E1;
+  --bg-white-glass: rgba(255, 255, 255, 0.9);
+  --grid-line: #EFEBE9;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.shift-page1 {
+  min-height: 100vh;
+  background-color: #ECEFF1;
+  background-image: linear-gradient(135deg, #EFEBE9 0%, #FFF3E0 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.page-header1 {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 4px solid var(--accent-orange);
+}
+
+.page-title1 {
+  color: var(--coffee-dark);
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-subtitle1 {
+  color: #795548;
+  margin: 5px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* --- Container --- */
+.calendar-container1 {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calendar-card1 {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 15px 50px rgba(62, 39, 35, 0.1);
+  height: 800px; /* Chiều cao cố định cho lịch */
+}
+
+/* --- CUSTOMIZING REACT BIG CALENDAR (.rbc) --- */
+
+/* Toolbar (Nút bấm tháng, tuần, ngày) */
+.rbc-toolbar1 button {
+  color: var(--coffee-primary);
+  border: 1px solid #D7CCC8 !important;
+  border-radius: 8px !important;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  padding: 8px 16px;
+  margin-left: 5px;
+  transition: all 0.2s;
+}
+
+.rbc-toolbar1 button:hover {
+  background-color: #FFF3E0;
+  color: var(--accent-orange);
+}
+
+.rbc-toolbar1 button.rbc-active {
+  background-color: var(--coffee-primary) !important;
+  color: white !important;
+  border-color: var(--coffee-primary) !important;
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.3);
+}
+
+.rbc-toolbar-label1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--coffee-dark);
+  text-transform: capitalize;
+}
+
+/* Header ngày trong tuần */
+.rbc-header1 {
+  background-color: var(--bg-warm);
+  color: var(--coffee-dark);
+  padding: 12px 0;
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent-orange) !important;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Ô ngày tháng */
+.rbc-day-bg1 {
+  border-left: 1px solid var(--grid-line) !important;
+}
+
+.rbc-off-range-bg1 {
+  background-color: #FAFAFA; /* Màu nền cho ngày tháng khác */
+}
+
+.rbc-today1 {
+  background-color: rgba(255, 243, 224, 0.5) !important; /* Highlight ngày hôm nay */
+}
+
+/* Sự kiện (Event Pill) */
+.rbc-event1 {
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2px 5px !important;
+  transition: transform 0.1s;
+}
+
+.rbc-event1:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.rbc-event-content1 {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px;
+}
+
+/* --- Modal Styles (Tương tự Employee Page) --- */
+.modal-overlay1 {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content1 {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-title1 {
+  font-size: 24px;
+  color: var(--coffee-dark);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 800;
+  border-bottom: 2px dashed #D7CCC8;
+  padding-bottom: 15px;
+}
+
+/* Form Styles */
+.form-group1 {
+  margin-bottom: 18px;
+}
+
+.form-label1 {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #5D4037;
+  font-size: 14px;
+}
+
+.form-input1, .form-select1 {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #E0E0E0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input1:focus, .form-select1:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  background: #FFF8E1;
+}
+
+/* Button Styles */
+.modal-actions1 {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn1 {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1:hover { transform: translateY(-2px); }
+
+.btn-save1 {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  color: white;
+  flex: 2;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-delete1 {
+  background: #FFEBEE;
+  color: #D32F2F;
+  flex: 1;
+}
+
+.btn-cancel1 {
+  background: #F5F5F5;
+  color: #757575;
+  flex: 1;
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --coffee-dark: #3E2723;
+  --coffee-primary: #5D4037;
+  --accent-orange: #F57C00;
+  --accent-green: #43A047;
+  --accent-blue: #1976D2;
+  --accent-red: #D32F2F;
+  --bg-light: #FFF8E1;
+  --text-dark: #263238;
+  --shadow-card: 0 10px 30px rgba(62, 39, 35, 0.1);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+/* --- Layout Chung --- */
+.employee-page {
+  min-height: 100vh;
+  background-color: #ECEFF1;
+  background-image: linear-gradient(135deg, #EFEBE9 0%, #FFF3E0 100%);
+}
+
+.page-header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.page-title {
+  color: var(--coffee-dark);
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-title::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 24px;
+  background: var(--accent-orange);
+  border-radius: 4px;
+}
+
+/* --- Container --- */
+.content-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Bảng dữ liệu (Table) --- */
+.table-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden; /* Để bo góc table */
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.modern-table thead {
+  background: var(--coffee-primary);
+  color: white;
+}
+
+.modern-table th {
+  padding: 18px 24px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modern-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid #EEEEEE;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.modern-table tbody tr:hover {
+  background-color: #FFF3E0; /* Màu nền khi di chuột */
+}
+
+.modern-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Các nút bấm (Buttons) --- */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  font-size: 15px;
+  padding: 12px 24px;
+}
+
+.btn-edit {
+  background: #E3F2FD;
+  color: var(--accent-blue);
+  padding: 8px 16px;
+}
+
+.btn-edit:hover {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.btn-delete {
+  background: #FFEBEE;
+  color: var(--accent-red);
+  padding: 8px 16px;
+  margin-left: 8px;
+}
+
+.btn-delete:hover {
+  background: var(--accent-red);
+  color: white;
+}
+
+/* --- Badge (Role) --- */
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.role-full {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.role-part {
+  background: #FFF3E0;
+  color: #EF6C00;
+}
+
+/* --- Modal (Popup) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: var(--coffee-dark);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #E0E0E0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+  box-sizing: border-box; /* Quan trọng để không bị vỡ layout */
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  background: #FFF8E1;
+}
+
+.form-input:disabled {
+  background: #F5F5F5;
+  cursor: not-allowed;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-save {
+  flex: 1;
+  background: var(--coffee-primary);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.btn-cancel {
+  flex: 1;
+  background: #F5F5F5;
+  color: #757575;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.btn-cancel:hover {
+  background: #E0E0E0;
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
