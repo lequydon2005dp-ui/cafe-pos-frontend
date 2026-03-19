@@ -61,8 +61,14 @@ Dự án được xây dựng với kiến trúc Fullstack, tách biệt hoàn t
    spring.datasource.url=jdbc:mysql://localhost:3306/coffee_app
    spring.datasource.username=root
    spring.datasource.password=
-3. Đổi lại địa chỉ Ip trong các file sau: `WebConfig`, `AttendanceController`, `CategoryController`,`EmployeeController`,`LiveCartController` thành Ip của máy bạn.
-4. Trong IntelliJ IDEA, VS Code hoặc Eclipse mở file `DemoApplication.java` và chạy `Run Java`.
+3. Đổi lại địa chỉ Ip trong các file sau:
+   `WebConfig`
+   `AttendanceController`
+   `CategoryController`
+   `EmployeeController`
+   `LiveCartController`
+   thành Ip của máy bạn.
+5. Trong IntelliJ IDEA, VS Code hoặc Eclipse mở file `DemoApplication.java` và chạy `Run Java`.
 ### 3. Chạy Frontend (React JS)
 1. Mở thư mục `fontend` bằng IntelliJ IDEA, VS Code hoặc Eclipse.
 2. Đổi lại địa chỉ Ip trong các file thành Ip của máy bạn bằng công cụ `Search`.
