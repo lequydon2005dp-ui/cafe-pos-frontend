@@ -57,6 +57,7 @@ Dự án được xây dựng với kiến trúc Fullstack, tách biệt hoàn t
 ### 2. Chạy Backend (Spring Boot)
 1. Mở thư mục `backend` bằng IntelliJ IDEA, VS Code hoặc Eclipse.
 2. Cấu hình lại kết nối database trong file `application.properties`
+   ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/coffee_app
    spring.datasource.username=root
    spring.datasource.password=
