@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Coffee & Milk Tea POS System ☕🧋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Một hệ thống Quản lý điểm bán hàng (POS - Point of Sale) dành cho quán cafe và trà sữa, giúp tối ưu hóa quy trình gọi món, quản lý hóa đơn và tính tiền một cách nhanh chóng. 
 
-## Available Scripts
+Dự án được xây dựng với kiến trúc Fullstack, tách biệt hoàn toàn giữa Frontend và Backend.
 
-In the project directory, you can run:
+## 🚀 Công nghệ sử dụng (Tech Stack)
 
-### `npm start`
+**Frontend:**
+* ReactJS
+* Các thư viện khác: axios, react-router-dom, qrcode.react, @stomp/stompjs, sockjs-client, recharts, react-big-calendar, react-datepicker,...
 
-Runs the app in the development mode.\
-Open [http://172.20.10.2:3000](http://172.20.10.2:3000) to view it in your browser.
+**Backend:**
+* Java Spring Boot
+* Spring Data JPA
+* Spring Security
+* JSON Web Token (JWT)
+* MySQL Connector
+* Spring WebSocket
+* Spring HATEOAS
+...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Database:**
+* MySQL / SQL Server
 
-### `npm test`
+## ✨ Tính năng nổi bật:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Quản lý thực đơn:** Hiển thị danh sách đồ uống phân theo danh mục (Cafe, Trà sữa, Topping...).
+* **Xử lý đơn hàng (Order):** Thêm/bớt món, chọn size, thêm topping trực tiếp trên giao diện.
+* **Thanh toán:** Tính tổng tiền tự động tiền mặt hoăc VNPay.
+* **Quản lý danh mục:** Thêm, sửa, xóa sản phẩm và danh mục từ phía Admin.
+* **Chức năng tích Điểm:** Tích điểm bằng số điện thoại của khách hàng.
+* **Menu Tại bàn:** Khách hàng có thể quét mã QR tại bàn để gọi món.
+* **Mã giảm giá:** Khách hàng có thể sử dụng mã giảm giá để thanh toán.
+* **Đăng ký ca làm việc:** Nhân viên tự đăng ký ca làm việc và Chủ của hàng sẽ duyệt.
+....
 
-### `npm run build`
+## 📸 Ảnh chụp màn hình (Screenshots)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Giao diện Menu Khách Hàng](./public/screenshot_1773895330.png)
+![Quản lý Order Nhân Viên](./public/screenshot_1773896398.png)
+![Quản lý Admin](./public/screenshot_1773895643.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Hướng dẫn cài đặt (Local Setup)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Để chạy dự án này trên máy cá nhân, hãy làm theo các bước sau:
 
-### `npm run eject`
+### 1. Cài đặt Database
+* Mở hệ quản trị CSDL của bạn (ví dụ: MySQL hoặc SQL Server).
+* Tạo một database mới tên là `coffee_app`.
+* (Tùy chọn) Import file `database.sql` có sẵn trong thư mục dự án `backend` trong `db` file `coffee_app.sql` để có dữ liệu mẫu.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. Chạy Backend (Spring Boot)
+1. Mở thư mục `backend` bằng IntelliJ IDEA, VS Code hoặc Eclipse.
+2. Cấu hình lại kết nối database trong file `application.properties`
+   spring.datasource.url=jdbc:mysql://localhost:3306/coffee_app
+   spring.datasource.username=root
+   spring.datasource.password=
+3. Đổi lại địa chỉ Ip trong các file sau: `WebConfig`, `AttendanceController`, `CategoryController`,`EmployeeController`,`LiveCartController` thành Ip của máy bạn.
+4. Trong IntelliJ IDEA, VS Code hoặc Eclipse mở file `DemoApplication.java` và chạy `Run Java`.
+### 3. Chạy Frontend (React JS)
+1. Mở thư mục `fontend` bằng IntelliJ IDEA, VS Code hoặc Eclipse.
+2. Đổi lại địa chỉ Ip trong các file thành Ip của máy bạn bằng công cụ `Search`.
+3. Mở thư mục file `fontend` mở cmd file lên Chạy `npm start`.
